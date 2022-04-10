@@ -1,8 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Nav, Navbar, Container, NavDropdown, Button } from "react-bootstrap";
 import "../../assets/css/NavbarMember.css";
-import logo from "../../assets/images/hero-img.svg";
 
 const NavbarMember = () => {
 	return (
@@ -16,13 +14,13 @@ const NavbarMember = () => {
 			>
 				<Container>
 					<Navbar.Brand href="#home" className="brand">
-						<img
+						{/* <img
 							alt=""
 							src="{logo}"
 							width="50"
 							height="50"
 							className="d-inline-block align-top"
-						/>{" "}
+						/>{" "} */}
 						Paketin
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />

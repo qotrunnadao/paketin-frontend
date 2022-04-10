@@ -54,11 +54,17 @@ function Hero() {
 						data-aos="zoom-out"
 						data-aos-delay={200}
 					>
-						<img
+						{/* <img
 							src="{require('../../../assets/images/hero-img.svg').default}"
 							className="img-fluid"
-							alt
-						/>
+							alt="test"
+						/> */}
+						<img
+                            className="d-block w-100 img-banner"
+                            src="assets/images/hero-img.svg"
+                            alt="hero"
+                        />
+
 					</div>
 				</Row>
 			</Container>
