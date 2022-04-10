@@ -1,54 +1,18 @@
 /*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-:root {
-	scroll-behavior: smooth;
-  }
-  
-  body {
-	font-family: "Open Sans", sans-serif;
-	color: #444444;
-  }
-  
-  a {
-	color: #4154f1;
-	text-decoration: none;
-  }
-  
-  a:hover {
-	color: #717ff5;
-	text-decoration: none;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-	font-family: "Nunito", sans-serif;
-  }
-  
-
-/*--------------------------------------------------------------
 # F.A.Q
 --------------------------------------------------------------*/
-.faq .accordion-collapse {
-	border: 0;
+.faq h2 {
+	font-size: 24px;
+	font-weight: 700;
+	color: #012970;
   }
-  .faq .accordion-button {
-	padding: 15px 15px 20px 0;
-	font-weight: 600;
-	border: 0;
-	font-size: 18px;
-	color: #444444;
-	text-align: left;
+
+  .card-faq{
+	  background-color: #f3f6fd;
   }
-  .faq .accordion-button:focus {
-	box-shadow: none;
+
+  .faq-header{
+	  text-align: center;
+	  font-weight: 600;
+	  color: #012970;
   }
-  .faq .accordion-button:not(.collapsed) {
-	background: none;
-	color: #4154f1;
-	border-bottom: 0;
-  }
-  .faq .accordion-body {
-	padding: 0 0 25px 0;
-	border: 0;
-  }
-  

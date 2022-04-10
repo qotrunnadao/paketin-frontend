@@ -1,15 +1,16 @@
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact h2 {
+	font-size: 24px;
+	font-weight: 700;
+	color: #012970;
+  }
 .contact .info-box {
 	color: #444444;
-	background: #fafbff;
+	background: #f3f6fd;
 	padding: 30px;
-  }
-  .contact .info-box i {
-	font-size: 38px;
-	line-height: 0;
-	color: #4154f1;
   }
   .contact .info-box h3 {
 	font-size: 20px;
@@ -24,7 +25,7 @@
 	margin-bottom: 0;
   }
   .contact .php-email-form {
-	background: #fafbff;
+	background: #f3f6fd;
 	padding: 30px;
 	height: 100%;
   }
@@ -81,7 +82,7 @@
 	padding: 12px 15px;
   }
   .contact .php-email-form button[type=submit] {
-	background: #4154f1;
+	background: #012970;
 	border: 0;
 	padding: 10px 30px;
 	color: #fff;

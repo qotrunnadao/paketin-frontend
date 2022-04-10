@@ -8,22 +8,33 @@ function AboutUs() {
 			<Container data-aos="fade-up">
 				<Row className="gx-0">
 					<Col
+						className="col-lg-6 d-flex align-items-center"
+						data-aos="zoom-out"
+						data-aos-delay={200}
+					>
+						<img
+							src="assets/images/about-img.svg"
+							className="img-fluid"
+							alt
+						/>
+					</Col>
+					<Col
 						className="col-lg-6 d-flex flex-column justify-content-center"
 						data-aos="fade-up"
 						data-aos-delay={200}
 					>
 						<div className="content">
-							<header className="section-header mb-5 text-center">
+							<header className="section-header mb-3">
 								<h2>About Us</h2>
 							</header>
-							<h2>
+							<h3>
 								Paketin merupakan jasa pengiriman barang di
 								indonesia dengan kemudahan dan kecepatan dalam
 								mengecek status setiap resi. Cukup masukkan
 								nomor resi, kamu bisa langsung mengetahui posisi
 								paket setelah menentukan pilihan kurir yang
 								digunakan.
-							</h2>
+							</h3>
 							<p>
 								Layanan kami memudahkan pengirim dan penerima
 								paket untuk mengetahui status resi atau
@@ -37,17 +48,6 @@ function AboutUs() {
 							</p>
 						</div>
 					</Col>
-					<div
-						className="col-lg-6 d-flex align-items-center"
-						data-aos="zoom-out"
-						data-aos-delay={200}
-					>
-						<img
-							src="assets/img/about.jpg"
-							className="img-fluid"
-							alt
-						/>
-					</div>
 				</Row>
 			</Container>
 		</section>

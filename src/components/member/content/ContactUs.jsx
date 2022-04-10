@@ -14,7 +14,6 @@ function ContactUs() {
 						<div className="row gy-4">
 							<div className="col-md-6">
 								<div className="info-box">
-									<i className="bi bi-geo-alt" />
 									<h3>Address</h3>
 									<p>
 										A108 Adam Street,
@@ -25,7 +24,6 @@ function ContactUs() {
 							</div>
 							<div className="col-md-6">
 								<div className="info-box">
-									<i className="bi bi-telephone" />
 									<h3>Call Us</h3>
 									<p>
 										+1 5589 55488 55
@@ -36,7 +34,6 @@ function ContactUs() {
 							</div>
 							<div className="col-md-6">
 								<div className="info-box">
-									<i className="bi bi-envelope" />
 									<h3>Email Us</h3>
 									<p>
 										info@example.com
@@ -47,7 +44,6 @@ function ContactUs() {
 							</div>
 							<div className="col-md-6">
 								<div className="info-box">
-									<i className="bi bi-clock" />
 									<h3>Open Hours</h3>
 									<p>
 										Monday - Friday
@@ -59,11 +55,7 @@ function ContactUs() {
 						</div>
 					</div>
 					<div className="col-lg-6">
-						<form
-							action="forms/contact.php"
-							method="post"
-							className="php-email-form"
-						>
+						<form className="php-email-form">
 							<div className="row gy-4">
 								<div className="col-md-6">
 									<input

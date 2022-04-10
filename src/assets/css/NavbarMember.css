@@ -1,6 +1,6 @@
 .header {
-	background: #B9CCED;
-	box-shadow: 0px 5px 30px rgba(133, 142, 228, 0.4);
+	background: #f3f6fd;
+	box-shadow: 0px 5px 30px rgba(155, 158, 187, 0.4);
 	height: auto;
 }
 
@@ -11,16 +11,14 @@
 }
 
 .link{
-	margin-right: 100px;
+	margin-right: 80px;
 	font-size: large;
 	font-weight: 600;
-	color: #012970;
 }
 
 .login-button{
 	font-weight: 600;
-	border-width: 2px;
-	color: #012970;
+	border-width: 0px;
 }
 
 /* cara bodoh */

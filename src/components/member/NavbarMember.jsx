@@ -2,6 +2,7 @@ import React from "react";
 import { FiLogIn } from "react-icons/fi";
 import { Nav, Navbar, Container, NavDropdown, Button } from "react-bootstrap";
 import "../../assets/css/NavbarMember.css";
+import "../../assets/css/General.css";
 
 const NavbarMember = () => {
 	return (

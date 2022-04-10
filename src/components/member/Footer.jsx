@@ -13,35 +13,25 @@ function Footer() {
 								href="index.html"
 								className="d-flex align-items-center"
 							>
-								<img
-									src="assets/images/logo2.png"
-									alt="logo"
-									width="400"
-									height="150"
-								/>
+								<img src="assets/images/logo2.png" alt="logo" />
 							</a>
 						</Col>
 						<Col className="col-lg-2 col-6 footer-links">
 							<h4>Useful Links</h4>
 							<ul>
 								<li>
-									<i className="bi bi-chevron-right" />{" "}
 									<a href="#home">Home</a>
 								</li>
 								<li>
-									<i className="bi bi-chevron-right" />{" "}
 									<a href="#about">About us</a>
 								</li>
 								<li>
-									<i className="bi bi-chevron-right" />{" "}
 									<a href="#office">Our Office</a>
 								</li>
 								<li>
-									<i className="bi bi-chevron-right" />{" "}
 									<a href="#faq">Faq</a>
 								</li>
 								<li>
-									<i className="bi bi-chevron-right" />{" "}
 									<a href="#contact">Contact</a>
 								</li>
 							</ul>
@@ -71,12 +61,7 @@ function Footer() {
 					</strong>
 					. All Rights Reserved
 				</div>
-				<div className="credits">
-					Designed by{" "}
-					<a href="https://bootstrapmade.com/">
-						Qotrunnada & Bugaresa
-					</a>
-				</div>
+				<div className="credits">Designed by Qotrunnada & Bugaresa</div>
 			</Container>
 		</footer>
 	);

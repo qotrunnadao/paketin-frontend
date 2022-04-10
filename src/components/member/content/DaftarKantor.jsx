@@ -1,10 +1,11 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "../../../assets/css/DaftarKantor.css";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 function DaftarKantor() {
 	return (
-		<section id="office" className="features my-5">
+		<section id="office" className="office my-5">
 			<Container data-aos="fade-up">
 				<header className="section-header mb-5 text-center">
 					<h2>Our Office</h2>
@@ -17,8 +18,8 @@ function DaftarKantor() {
 								data-aos="zoom-out"
 								data-aos-delay={200}
 							>
-								<div className="feature-box d-flex align-items-center">
-									<i className="bi bi-check" />
+								<div className="office-box d-flex align-items-center">
+									<FaMapMarkerAlt />
 									<h3>Tangerang Selatan</h3>
 								</div>
 							</Col>
@@ -27,8 +28,8 @@ function DaftarKantor() {
 								data-aos="zoom-out"
 								data-aos-delay={300}
 							>
-								<div className="feature-box d-flex align-items-center">
-									<i className="bi bi-check" />
+								<div className="office-box d-flex align-items-center">
+									<FaMapMarkerAlt />
 									<h3>Jakarta</h3>
 								</div>
 							</Col>
@@ -37,8 +38,8 @@ function DaftarKantor() {
 								data-aos="zoom-out"
 								data-aos-delay={400}
 							>
-								<div className="feature-box d-flex align-items-center">
-									<i className="bi bi-check" />
+								<div className="office-box d-flex align-items-center">
+									<FaMapMarkerAlt />
 									<h3>Tegal</h3>
 								</div>
 							</Col>
@@ -47,8 +48,8 @@ function DaftarKantor() {
 								data-aos="zoom-out"
 								data-aos-delay={500}
 							>
-								<div className="feature-box d-flex align-items-center">
-									<i className="bi bi-check" />
+								<div className="office-box d-flex align-items-center">
+									<FaMapMarkerAlt />
 									<h3>Semarang</h3>
 								</div>
 							</Col>
@@ -57,8 +58,8 @@ function DaftarKantor() {
 								data-aos="zoom-out"
 								data-aos-delay={600}
 							>
-								<div className="feature-box d-flex align-items-center">
-									<i className="bi bi-check" />
+								<div className="office-box d-flex align-items-center">
+									<FaMapMarkerAlt />
 									<h3>Purwokerto</h3>
 								</div>
 							</Col>
@@ -67,8 +68,8 @@ function DaftarKantor() {
 								data-aos="zoom-out"
 								data-aos-delay={700}
 							>
-								<div className="feature-box d-flex align-items-center">
-									<i className="bi bi-check" />
+								<div className="office-box d-flex align-items-center">
+									<FaMapMarkerAlt />
 									<h3>Cilacap</h3>
 								</div>
 							</Col>
@@ -81,8 +82,8 @@ function DaftarKantor() {
 								data-aos="zoom-out"
 								data-aos-delay={200}
 							>
-								<div className="feature-box d-flex align-items-center">
-									<i className="bi bi-check" />
+								<div className="office-box d-flex align-items-center">
+									<FaMapMarkerAlt />
 									<h3>Tangerang Selatan</h3>
 								</div>
 							</Col>
@@ -91,8 +92,8 @@ function DaftarKantor() {
 								data-aos="zoom-out"
 								data-aos-delay={300}
 							>
-								<div className="feature-box d-flex align-items-center">
-									<i className="bi bi-check" />
+								<div className="office-box d-flex align-items-center">
+									<FaMapMarkerAlt />
 									<h3>Jakarta</h3>
 								</div>
 							</Col>
@@ -101,8 +102,8 @@ function DaftarKantor() {
 								data-aos="zoom-out"
 								data-aos-delay={400}
 							>
-								<div className="feature-box d-flex align-items-center">
-									<i className="bi bi-check" />
+								<div className="office-box d-flex align-items-center">
+									<FaMapMarkerAlt />
 									<h3>Tegal</h3>
 								</div>
 							</Col>
@@ -111,8 +112,8 @@ function DaftarKantor() {
 								data-aos="zoom-out"
 								data-aos-delay={500}
 							>
-								<div className="feature-box d-flex align-items-center">
-									<i className="bi bi-check" />
+								<div className="office-box d-flex align-items-center">
+									<FaMapMarkerAlt />
 									<h3>Semarang</h3>
 								</div>
 							</Col>
@@ -121,8 +122,8 @@ function DaftarKantor() {
 								data-aos="zoom-out"
 								data-aos-delay={600}
 							>
-								<div className="feature-box d-flex align-items-center">
-									<i className="bi bi-check" />
+								<div className="office-box d-flex align-items-center">
+									<FaMapMarkerAlt />
 									<h3>Purwokerto</h3>
 								</div>
 							</Col>
@@ -131,8 +132,8 @@ function DaftarKantor() {
 								data-aos="zoom-out"
 								data-aos-delay={700}
 							>
-								<div className="feature-box d-flex align-items-center">
-									<i className="bi bi-check" />
+								<div className="office-box d-flex align-items-center">
+									<FaMapMarkerAlt />
 									<h3>Cilacap</h3>
 								</div>
 							</Col>

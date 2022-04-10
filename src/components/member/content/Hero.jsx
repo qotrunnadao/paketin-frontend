@@ -26,12 +26,10 @@ function Hero() {
 							<div className="text-center text-lg-start">
 								<InputGroup className="mt-5 search">
 									<FormControl aria-label="Text input" />
-
 									<DropdownButton
 										title="Cek Resi"
-										id="input-group-dropdown-2"
 										align="center"
-										className="btn-get-started"
+										className="btn-cek"
 									>
 										<Dropdown.Item href="#">
 											Action
@@ -56,11 +54,6 @@ function Hero() {
 						data-aos="zoom-out"
 						data-aos-delay={200}
 					>
-						{/* <img
-							src="{require('../../../assets/images/hero-img.svg').default}"
-							className="img-fluid"
-							alt="test"
-						/> */}
 						<img
 							className="d-block w-100 img-banner"
 							src="assets/images/hero-img.svg"
