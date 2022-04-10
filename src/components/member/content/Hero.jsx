@@ -12,11 +12,13 @@ import "../../../assets/css/HeroMember.css";
 
 function Hero() {
 	return (
-		<section id="hero" className="hero d-flex align-items-center">
+		<section id="home" className="hero d-flex align-items-center">
 			<Container>
 				<Row>
 					<Col className="col-lg-6 d-flex flex-column justify-content-center">
-						<h1 data-aos="fade-up">Jasa Pengiriman Barang</h1>
+						<h1 data-aos="fade-up">
+							Jasa Pengiriman Barang & Cek Resi
+						</h1>
 						<h2 data-aos="fade-up" data-aos-delay={400}>
 							Dijamin Aman Sampai Tujuan
 						</h2>
@@ -60,11 +62,10 @@ function Hero() {
 							alt="test"
 						/> */}
 						<img
-                            className="d-block w-100 img-banner"
-                            src="assets/images/hero-img.svg"
-                            alt="hero"
-                        />
-
+							className="d-block w-100 img-banner"
+							src="assets/images/hero-img.svg"
+							alt="hero"
+						/>
 					</div>
 				</Row>
 			</Container>

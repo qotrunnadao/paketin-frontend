@@ -1,5 +1,5 @@
 import React from "react";
-import { FiLogIn } from 'react-icons/fi';
+import { FiLogIn } from "react-icons/fi";
 import { Nav, Navbar, Container, NavDropdown, Button } from "react-bootstrap";
 import "../../assets/css/NavbarMember.css";
 
@@ -15,14 +15,13 @@ const NavbarMember = () => {
 			>
 				<Container>
 					<Navbar.Brand href="#home" className="brand">
-						{/* <img
+						<img
 							alt=""
-							src="{logo}"
-							width="50"
+							src="assets/images/logo2.png"
+							width="120"
 							height="50"
 							className="d-inline-block align-top"
-						/>{" "} */}
-						Paketin
+						/>{" "}
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
@@ -30,54 +29,27 @@ const NavbarMember = () => {
 							<Nav.Link href="#home" className="link">
 								Home
 							</Nav.Link>
-							<Nav.Link href="#link" className="link">
+							<Nav.Link href="#about" className="link">
 								About
 							</Nav.Link>
-							<NavDropdown
-								title="Cek Resi"
-								id="basic-nav-dropdown"
-								className="link"
-							>
-								<NavDropdown.Item href="#action/3.1">
-									Action
-								</NavDropdown.Item>
-								<NavDropdown.Item href="#action/3.2">
-									Another action
-								</NavDropdown.Item>
-								<NavDropdown.Item href="#action/3.3">
-									Something
-								</NavDropdown.Item>
-								<NavDropdown.Divider />
-								<NavDropdown.Item href="#action/3.4">
-									Separated link
-								</NavDropdown.Item>
-							</NavDropdown>
-							<NavDropdown
-								title="Cek Ongkir"
-								id="basic-nav-dropdown"
-								className="link"
-							>
-								<NavDropdown.Item href="#action/3.1">
-									Action
-								</NavDropdown.Item>
-								<NavDropdown.Item href="#action/3.2">
-									Another action
-								</NavDropdown.Item>
-								<NavDropdown.Item href="#action/3.3">
-									Something
-								</NavDropdown.Item>
-								<NavDropdown.Divider />
-								<NavDropdown.Item href="#action/3.4">
-									Separated link
-								</NavDropdown.Item>
-							</NavDropdown>
+							<Nav.Link href="#office" className="link">
+								Office
+							</Nav.Link>
+							<Nav.Link href="#faq" className="link">
+								FAQ
+							</Nav.Link>
+							<Nav.Link href="#contact" className="link">
+								Contact
+							</Nav.Link>
 						</Nav>
 						<Button
 							variant="outline-secondary"
 							className="login-button"
 						>
-							Login 
-							<span className="icons-login"><FiLogIn/></span>
+							Login
+							<span className="icons-login">
+								<FiLogIn />
+							</span>
 						</Button>
 					</Navbar.Collapse>
 				</Container>

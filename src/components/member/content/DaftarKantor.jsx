@@ -4,10 +4,10 @@ import "../../../assets/css/DaftarKantor.css";
 
 function DaftarKantor() {
 	return (
-		<section id="features" className="features my-5">
+		<section id="office" className="features my-5">
 			<Container data-aos="fade-up">
 				<header className="section-header mb-5 text-center">
-					<h2>Daftar Kantor Kami</h2>
+					<h2>Our Office</h2>
 				</header>
 				<Row>
 					<Col className="col-lg-6 mt-5 mt-lg-0 d-flex">

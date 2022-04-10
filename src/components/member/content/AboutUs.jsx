@@ -14,7 +14,7 @@ function AboutUs() {
 					>
 						<div className="content">
 							<header className="section-header mb-5 text-center">
-								<h2>Tentang Kami</h2>
+								<h2>About Us</h2>
 							</header>
 							<h2>
 								Paketin merupakan jasa pengiriman barang di

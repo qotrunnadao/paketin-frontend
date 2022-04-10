@@ -11,79 +11,38 @@ function Footer() {
 						<Col className="col-lg-5 col-md-12 footer-info">
 							<a
 								href="index.html"
-								className="logo d-flex align-items-center"
+								className="d-flex align-items-center"
 							>
-								<img src="assets/img/logo.png" alt />
-								<span>Paketin.com</span>
+								<img
+									src="assets/images/logo2.png"
+									alt="logo"
+									width="400"
+									height="150"
+								/>
 							</a>
-							<p>
-								Cras fermentum odio eu feugiat lide par naso
-								tierra. Justo eget nada terra videa magna derita
-								valies darta donna mare fermentum iaculis eu non
-								diam phasellus.
-							</p>
-							<div className="social-links mt-3">
-								<a href="#" className="twitter">
-									<i className="bi bi-twitter" />
-								</a>
-								<a href="#" className="facebook">
-									<i className="bi bi-facebook" />
-								</a>
-								<a href="#" className="instagram">
-									<i className="bi bi-instagram" />
-								</a>
-								<a href="#" className="linkedin">
-									<i className="bi bi-linkedin" />
-								</a>
-							</div>
 						</Col>
 						<Col className="col-lg-2 col-6 footer-links">
 							<h4>Useful Links</h4>
 							<ul>
 								<li>
 									<i className="bi bi-chevron-right" />{" "}
-									<a href="#">Home</a>
+									<a href="#home">Home</a>
 								</li>
 								<li>
 									<i className="bi bi-chevron-right" />{" "}
-									<a href="#">About us</a>
+									<a href="#about">About us</a>
 								</li>
 								<li>
 									<i className="bi bi-chevron-right" />{" "}
-									<a href="#">Services</a>
+									<a href="#office">Our Office</a>
 								</li>
 								<li>
 									<i className="bi bi-chevron-right" />{" "}
-									<a href="#">Terms of service</a>
+									<a href="#faq">Faq</a>
 								</li>
 								<li>
 									<i className="bi bi-chevron-right" />{" "}
-									<a href="#">Privacy policy</a>
-								</li>
-							</ul>
-						</Col>
-						<Col className="col-lg-2 col-6 footer-links">
-							<h4>Our Services</h4>
-							<ul>
-								<li>
-									<i className="bi bi-chevron-right" />{" "}
-									<a href="#">Web Design</a>
-								</li>
-								<li>
-									<i className="bi bi-chevron-right" />{" "}
-									<a href="#">Web Development</a>
-								</li>
-								<li>
-									<i className="bi bi-chevron-right" />{" "}
-									<a href="#">Product Management</a>
-								</li>
-								<li>
-									<i className="bi bi-chevron-right" />{" "}
-									<a href="#">Marketing</a>
-								</li>
-								<li>
-									<i className="bi bi-chevron-right" />{" "}
-									<a href="#">Graphic Design</a>
+									<a href="#contact">Contact</a>
 								</li>
 							</ul>
 						</Col>
