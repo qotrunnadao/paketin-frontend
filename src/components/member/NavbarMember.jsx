@@ -1,6 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Nav, Navbar, Container, NavDropdown, Button } from "react-bootstrap";
 import "../../assets/css/NavbarMember.css";
+import logo from "../../assets/images/hero-img.svg";
 
 const NavbarMember = () => {
 	return (
@@ -16,12 +18,12 @@ const NavbarMember = () => {
 					<Navbar.Brand href="#home" className="brand">
 						<img
 							alt=""
-							src=""
+							src="{logo}"
 							width="50"
 							height="50"
 							className="d-inline-block align-top"
 						/>{" "}
-						ButgaResi.id
+						Paketin
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
@@ -76,6 +78,7 @@ const NavbarMember = () => {
 							className="login-button"
 						>
 							Login
+							<i class="fa-regular fa-right-to-bracket"></i>
 						</Button>
 					</Navbar.Collapse>
 				</Container>

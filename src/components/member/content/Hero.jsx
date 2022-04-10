@@ -1,6 +1,5 @@
 import React from "react";
 import {
-	Button,
 	InputGroup,
 	DropdownButton,
 	Dropdown,
@@ -9,7 +8,6 @@ import {
 	Row,
 	Col,
 } from "react-bootstrap";
-import Image from "react-bootstrap/Image";
 import "../../../assets/css/HeroMember.css";
 
 function Hero() {
@@ -25,13 +23,13 @@ function Hero() {
 						<div data-aos="fade-up" data-aos-delay={600}>
 							<div className="text-center text-lg-start">
 								<InputGroup className="mt-5 search">
-									<FormControl aria-label="Text input with dropdown button" />
+									<FormControl aria-label="Text input" />
 
 									<DropdownButton
-										variant="outline-primary"
 										title="Cek Resi"
 										id="input-group-dropdown-2"
 										align="center"
+										className="btn-get-started"
 									>
 										<Dropdown.Item href="#">
 											Action
@@ -56,8 +54,8 @@ function Hero() {
 						data-aos="zoom-out"
 						data-aos-delay={200}
 					>
-						<Image
-							src="../../../assets/images/"
+						<img
+							src="{require('../../../assets/images/hero-img.svg').default}"
 							className="img-fluid"
 							alt
 						/>

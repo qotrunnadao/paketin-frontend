@@ -7,19 +7,7 @@ import Footer from "./components/member/Footer";
 import NavbarComponent from "./components/member/NavbarMember";
 
 function App() {
-	return (
-		<div className="App">
-			<NavbarComponent></NavbarComponent>
-			<Hero></Hero>
-			<main id="main">
-				<AboutUs></AboutUs>
-				<DaftarKantor></DaftarKantor>
-				<Faq></Faq>
-				<ContactUs></ContactUs>
-			</main>
-			<Footer></Footer>
-		</div>
-	);
+	return <div></div>;
 }
 
 export default App;

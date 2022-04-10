@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import MemberPage from "./pages/member/MemberPage";
+import AdminPage from "./pages/admin/AdminPage";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<MemberPage></MemberPage>
 	</React.StrictMode>,
 	document.getElementById("root")
 );
