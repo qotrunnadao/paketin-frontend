@@ -1,4 +1,5 @@
 import React from "react";
+import { FiLogIn } from 'react-icons/fi';
 import { Nav, Navbar, Container, NavDropdown, Button } from "react-bootstrap";
 import "../../assets/css/NavbarMember.css";
 
@@ -75,8 +76,8 @@ const NavbarMember = () => {
 							variant="outline-secondary"
 							className="login-button"
 						>
-							Login
-							<i class="fa-regular fa-right-to-bracket"></i>
+							Login 
+							<span className="icons-login"><FiLogIn/></span>
 						</Button>
 					</Navbar.Collapse>
 				</Container>

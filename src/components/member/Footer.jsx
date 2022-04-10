@@ -115,7 +115,7 @@ function Footer() {
 				<div className="credits">
 					Designed by{" "}
 					<a href="https://bootstrapmade.com/">
-						Qotrunnada & Arif Yuniarto
+						Qotrunnada & Bugaresa
 					</a>
 				</div>
 			</Container>
