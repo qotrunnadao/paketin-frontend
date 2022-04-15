@@ -4,10 +4,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import reportWebVitals from "./reportWebVitals";
 import MemberPage from "./pages/member/MemberPage";
 import AdminPage from "./pages/admin/AdminPage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<MemberPage></MemberPage>
+		<RegisterPage></RegisterPage>
 	</React.StrictMode>,
 	document.getElementById("root")
 );
