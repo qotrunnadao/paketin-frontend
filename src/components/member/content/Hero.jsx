@@ -10,21 +10,23 @@ import {
 } from "react-bootstrap";
 import "../../../assets/css/HeroMember.css";
 
-function Hero() {
+export const Hero = (props) => {
 	return (
 		<section id="home" className="hero d-flex align-items-center">
 			<Container>
 				<Row>
 					<Col className="col-lg-6 d-flex flex-column justify-content-center">
-						<h1 data-aos="fade-up">
+						<h1 data-aos="fade-up">{props.title}</h1>
+						<h1 data-aos="fade-up" data-aos-delay={400}>
 							Jasa Pengiriman Barang & Cek Resi
 						</h1>
-						<h2 data-aos="fade-up" data-aos-delay={400}>
-							Dijamin Aman Sampai Tujuan
+						<h2 data-aos="fade-up" data-aos-delay={600}>
+							{" "}
+							Dijamin Aman Sampai Tujuan!
 						</h2>
-						<div data-aos="fade-up" data-aos-delay={600}>
+						<div data-aos="fade-up" data-aos-delay={800}>
 							<div className="text-center text-lg-start">
-								<InputGroup className="mt-5 search">
+								<InputGroup className="mt-3 search">
 									<FormControl aria-label="Text input" />
 									<DropdownButton
 										title="Cek Resi"
@@ -64,6 +66,6 @@ function Hero() {
 			</Container>
 		</section>
 	);
-}
+};
 
 export default Hero;

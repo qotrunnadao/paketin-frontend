@@ -15,12 +15,11 @@ function NavbarAdmin() {
 					<Navbar.Brand href="#home" className="brand">
 						<img
 							alt=""
-							src="{logo}"
-							width="50"
+							src="assets/images/logo2.png"
+							width="120"
 							height="50"
 							className="d-inline-block align-top"
 						/>{" "}
-						Paketin
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
