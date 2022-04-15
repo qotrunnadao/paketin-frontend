@@ -5,7 +5,7 @@ import "../../assets/css/FooterMember.css";
 function Footer() {
 	return (
 		<footer id="footer" className="footer">
-			<div className="footer-top">
+			{/* <div className="footer-top">
 				<Container>
 					<Row className="gy-4">
 						<Col className="col-lg-5 col-md-12 footer-info">
@@ -52,7 +52,7 @@ function Footer() {
 						</Col>
 					</Row>
 				</Container>
-			</div>
+			</div> */}
 			<Container>
 				<div className="copyright">
 					© Copyright{" "}
