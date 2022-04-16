@@ -14,12 +14,37 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import FormCreateUser from "../form/FormCreateUser";
 import { connect } from "react-redux";
 import { PostUserCreate } from "../../../actions/UserAction";
+import swal from "sweetalert";
+
+const mapStateToProps = (state) => {
+	return {
+		getResponseDataUser: state.users.getResponseDataUser,
+		errorResponseDataUser: state.users.errorResponseDataUser,
+	};
+};
 
 class ContentCreateUser extends Component {
 	handleSubmit(data) {
 		this.props.dispatch(PostUserCreate(data));
 	}
 	render() {
+		if (
+			this.props.getResponseDataUser ||
+			this.props.errorResponseDataUser
+		) {
+			if (this.props.errorResponseDataUser) {
+				swal("Failed!", this.props.errorResponseDataUser, "error");
+			} else {
+				swal(
+					"User Created!",
+					"Nama Kantor : " +
+						this.props.getResponseDataUser.nama_kantor +
+						" , Nama Admin : " +
+						this.props.getResponseDataUser.nama_admin,
+					"success"
+				);
+			}
+		}
 		return (
 			<Container className="my-5">
 				<Card>
@@ -47,4 +72,4 @@ class ContentCreateUser extends Component {
 	}
 }
 
-export default connect()(ContentCreateUser);
+export default connect(mapStateToProps, null)(ContentCreateUser);
