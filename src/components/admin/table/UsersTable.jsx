@@ -8,6 +8,7 @@ import {
 	Button,
 	Row,
 	Col,
+	Spinner,
 } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit, faTrash, faUserPlus } from "@fortawesome/free-solid-svg-icons";
@@ -15,6 +16,8 @@ import ToolkitProvider, {
 	Search,
 } from "react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit";
 import paginationFactory from "react-bootstrap-table2-paginator";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 const { SearchBar } = Search;
 
@@ -58,10 +61,12 @@ const columns = [
 		formatter: (rowContent, row) => {
 			return (
 				<div>
-					<Button color="warning" className="mr-2">
-						<FontAwesomeIcon icon={faEdit} /> Edit
-					</Button>
-					<Button color="danger" className="mr-2">
+					<Link to={"edit-user/" + row.id}>
+						<Button color="warning" className="mb-2">
+							<FontAwesomeIcon icon={faEdit} /> Edit
+						</Button>
+					</Link>
+					<Button color="danger" className="">
 						<FontAwesomeIcon icon={faTrash} /> Delete
 					</Button>
 				</div>
@@ -77,19 +82,26 @@ const defaultSorted = [
 	},
 ];
 
-const UserTable = (props) => {
+const mapStateToProps = (state) => {
+	return {
+		getUsersList: state.users.getUsersList,
+		errorUsersList: state.users.errorUsersList,
+	};
+};
+
+const UsersTable = (props) => {
 	return (
-		<Container className="mt-3">
-			<div>
-				<Card>
-					<CardBody>
-						<CardTitle tag="h4" className="mb-3">
-							Data User Paketin
-						</CardTitle>
+		<Container className="my-5">
+			<Card>
+				<CardBody>
+					<CardTitle tag="h4" className="mb-3">
+						Data User Paketin
+					</CardTitle>
+					{props.getUsersList ? (
 						<ToolkitProvider
 							bootstrap4
 							keyField="id"
-							data={props.users}
+							data={props.getUsersList}
 							columns={columns}
 							defaultSorted={defaultSorted}
 							search
@@ -97,6 +109,16 @@ const UserTable = (props) => {
 							{(props) => (
 								<div>
 									<Row>
+										<Col>
+											<Link to="/create-user">
+												<Button color="primary">
+													<FontAwesomeIcon
+														icon={faUserPlus}
+													/>{" "}
+													Create User
+												</Button>
+											</Link>
+										</Col>
 										<Col>
 											<div className="float-right mb-3">
 												<SearchBar
@@ -114,11 +136,19 @@ const UserTable = (props) => {
 								</div>
 							)}
 						</ToolkitProvider>
-					</CardBody>
-				</Card>
-			</div>
+					) : (
+						<div className="text-center">
+							{props.errorUsersList ? (
+								<h4>{props.errorUsersList}</h4>
+							) : (
+								<Spinner color="dark" />
+							)}
+						</div>
+					)}
+				</CardBody>
+			</Card>
 		</Container>
 	);
 };
 
-export default UserTable;
+export default connect(mapStateToProps, null)(UsersTable);

@@ -9,7 +9,7 @@ function NavbarAdmin() {
 				variant="light"
 				id="header"
 				className="header"
-				fixed="top"
+				sticky="top"
 			>
 				<Container>
 					<Navbar.Brand href="#home" className="brand">
@@ -31,7 +31,7 @@ function NavbarAdmin() {
 								Pengiriman
 							</Nav.Link>
 							<Nav.Link href="#home" className="link">
-								Users
+								Data User
 							</Nav.Link>
 						</Nav>
 						<Button
