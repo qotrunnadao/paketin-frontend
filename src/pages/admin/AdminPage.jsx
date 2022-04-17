@@ -5,7 +5,7 @@ import NavbarAdmin from "../../components/admin/NavbarAdmin";
 import Footer from "../../components/Footer";
 import ContentDataUsers from "../../components/admin/content/ContentDataUsers";
 import ContentCreateUser from "../../components/admin/content/ContentCreateUser";
-import EditUser from "../../components/admin/form/EditUser";
+import ContentEditUser from "../../components/admin/content/ContentEditUser";
 import ContentDataPengiriman from "../../components/admin/content/ContentDataPengiriman";
 
 export default class AdminPage extends Component {
@@ -30,7 +30,7 @@ export default class AdminPage extends Component {
 						></Route>
 						<Route
 							path="/edit-user/:id"
-							element={<EditUser />}
+							element={<ContentEditUser />}
 						></Route>
 						<Route
 							path="/pengiriman"

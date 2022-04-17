@@ -18,62 +18,28 @@ import ToolkitProvider, {
 import paginationFactory from "react-bootstrap-table2-paginator";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import swal from "sweetalert";
+import { deleteUser } from "../../../redux/actions/UserAction";
 
 const { SearchBar } = Search;
 
-const columns = [
-	{
-		dataField: "id",
-		text: "ID",
-		sort: true,
-		headerStyle: () => {
-			return { width: "5%" };
-		},
-	},
-	{
-		dataField: "nama_kantor",
-		text: "Nama Kantor",
-		sort: true,
-	},
-	{
-		dataField: "nama_admin",
-		text: "Nama Admin",
-		sort: true,
-	},
-	{
-		dataField: "nomor_kantor",
-		text: "Nomor Kantor",
-		sort: true,
-	},
-	{
-		dataField: "alamat_kantor",
-		text: "Alamat Kantor",
-		sort: true,
-	},
-	{
-		dataField: "password",
-		text: "Password",
-		sort: true,
-	},
-	{
-		dataField: "link",
-		text: "Action",
-		formatter: (rowContent, row) => {
-			return (
-				<div>
-					<Link to={"edit-user/" + row.id}>
-						<Button color="warning" className="mr-2">
-							<FontAwesomeIcon icon={faEdit} /> Edit
-						</Button>
-					</Link>
-					<Button color="danger" className="">
-						<FontAwesomeIcon icon={faTrash} /> Delete
-					</Button>
-				</div>
-			);
-		},
-	},
-];
+const handleClick = (dispatch, id) => {
+	swal({
+		title: "Apakah Anda yakin akan menghapus data ini ?",
+		icon: "warning",
+		buttons: true,
+		dangerMode: true,
+	}).then((willDelete) => {
+		if (willDelete) {
+			dispatch(deleteUser(id));
+			swal("Data User Sukses dihapus", {
+				icon: "success",
+			});
+		} else {
+			swal("Data gagal dihapus");
+		}
+	});
+};
 
 const defaultSorted = [
 	{
@@ -91,6 +57,64 @@ const mapStateToProps = (state) => {
 };
 
 const UsersTable = (props) => {
+	const columns = [
+		{
+			dataField: "id",
+			text: "ID",
+			sort: true,
+			headerStyle: () => {
+				return { width: "5%" };
+			},
+		},
+		{
+			dataField: "nama_kantor",
+			text: "Nama Kantor",
+			sort: true,
+		},
+		{
+			dataField: "nama_admin",
+			text: "Nama Admin",
+			sort: true,
+		},
+		{
+			dataField: "nomor_kantor",
+			text: "Nomor Kantor",
+			sort: true,
+		},
+		{
+			dataField: "alamat_kantor",
+			text: "Alamat Kantor",
+			sort: true,
+		},
+		{
+			dataField: "password",
+			text: "Password",
+			sort: true,
+		},
+		{
+			dataField: "link",
+			text: "Action",
+			formatter: (rowContent, row) => {
+				return (
+					<div>
+						<Link to={"edit-user/" + row.id}>
+							<Button color="warning" className="mr-2">
+								<FontAwesomeIcon icon={faEdit} /> Edit
+							</Button>
+						</Link>
+						<Button
+							color="danger"
+							className="mr-2"
+							onClick={() => handleClick(props.dispatch, row.id)}
+						>
+							<FontAwesomeIcon icon={faTrash} /> Delete
+						</Button>
+					</div>
+				);
+			},
+		},
+	];
+
 	return (
 		<Container className="my-5">
 			<Card>
@@ -119,9 +143,8 @@ const UsersTable = (props) => {
 													Create User
 												</Button>
 											</Link>
-										</Col>
-										<Col className="float-right">
-											<div>
+
+											<div className="mt-3">
 												<SearchBar
 													{...props.searchProps}
 													placeholder="Search .."
