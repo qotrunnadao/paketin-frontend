@@ -12,10 +12,14 @@ export default class AdminPage extends Component {
 	render() {
 		return (
 			<div>
-				<NavbarAdmin></NavbarAdmin>
 				<Router>
+					<NavbarAdmin></NavbarAdmin>
 					<Routes>
-						<Route path="/" element={<ContentHomeAdmin />}></Route>
+						<Route
+							path="/"
+							exact
+							element={<ContentHomeAdmin />}
+						></Route>
 						<Route
 							path="/users"
 							element={<ContentDataUsers />}
@@ -33,8 +37,8 @@ export default class AdminPage extends Component {
 							element={<ContentDataPengiriman />}
 						></Route>
 					</Routes>
+					<Footer></Footer>
 				</Router>
-				<Footer></Footer>
 			</div>
 		);
 	}

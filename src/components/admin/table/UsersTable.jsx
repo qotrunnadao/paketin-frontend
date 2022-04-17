@@ -26,7 +26,7 @@ const columns = [
 		dataField: "id",
 		text: "ID",
 		sort: true,
-		headerStyles: () => {
+		headerStyle: () => {
 			return { width: "5%" };
 		},
 	},
@@ -37,7 +37,7 @@ const columns = [
 	},
 	{
 		dataField: "nama_admin",
-		text: "Nama_admin",
+		text: "Nama Admin",
 		sort: true,
 	},
 	{
@@ -62,7 +62,7 @@ const columns = [
 			return (
 				<div>
 					<Link to={"edit-user/" + row.id}>
-						<Button color="warning" className="mb-2">
+						<Button color="warning" className="mr-2">
 							<FontAwesomeIcon icon={faEdit} /> Edit
 						</Button>
 					</Link>
@@ -82,6 +82,7 @@ const defaultSorted = [
 	},
 ];
 
+// memanggil state global menjadi props
 const mapStateToProps = (state) => {
 	return {
 		getUsersList: state.users.getUsersList,
@@ -108,7 +109,7 @@ const UsersTable = (props) => {
 						>
 							{(props) => (
 								<div>
-									<Row>
+									<Row className="mb-3">
 										<Col>
 											<Link to="/create-user">
 												<Button color="primary">
@@ -119,8 +120,8 @@ const UsersTable = (props) => {
 												</Button>
 											</Link>
 										</Col>
-										<Col>
-											<div className="float-right mb-3">
+										<Col className="float-right">
+											<div>
 												<SearchBar
 													{...props.searchProps}
 													placeholder="Search .."

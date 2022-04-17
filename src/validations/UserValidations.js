@@ -17,6 +17,10 @@ const UserValidation = (values) => {
 		errors.nomor_kantor = "Nomor kantor harus diisi";
 	}
 
+	if (!values.password || values.password === "") {
+		errors.password = "Password harus diisi";
+	}
+
 	return errors;
 };
 

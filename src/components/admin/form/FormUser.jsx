@@ -34,7 +34,7 @@ const renderField = ({
 	</Row>
 );
 
-class formCreateUser extends Component {
+class formUser extends Component {
 	render() {
 		return (
 			<form onSubmit={this.props.handleSubmit}>
@@ -82,6 +82,16 @@ class formCreateUser extends Component {
 							/>
 						</FormGroup>
 					</Col>
+					<Col md={6}>
+						<FormGroup>
+							<Field
+								type="password"
+								name="password"
+								component={renderField}
+								label="Password :"
+							/>
+						</FormGroup>
+					</Col>
 				</FormGroup>
 
 				<FormGroup row>
@@ -103,9 +113,9 @@ class formCreateUser extends Component {
 	}
 }
 
-formCreateUser = reduxForm({
+formUser = reduxForm({
 	form: "formCreateUser",
 	enableReinitialize: true,
 	validate: UserValidation,
-})(formCreateUser);
-export default connect()(formCreateUser);
+})(formUser);
+export default connect()(formUser);
