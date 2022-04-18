@@ -5,17 +5,19 @@ export const POST_USER_CREATE = "POST_USER_CREATE";
 export const GET_USER_DETAIL = "GET_USER_DETAIL";
 export const PUT_USER_EDIT = "PUT_USER_EDIT";
 
+const baseURL = "https://sandbox-paketin.herokuapp.com/v1";
+
 export const getUsersList = () => {
 	return (dispatch) => {
 		axios
-			.get("http://my-json-server.typicode.com/qotrunnadao/json-db/users")
+			.get(baseURL + "/api/users")
 			.then(function (response) {
 				// handle success
 				dispatch({
 					type: GET_USERS_LIST,
 					payload: {
-						data: response.data,
-						errorMessage: false,
+						data: response.paketin.data,
+						Message: false,
 					},
 				});
 			})
@@ -35,10 +37,7 @@ export const getUsersList = () => {
 export const getUserDetail = (id) => {
 	return (dispatch) => {
 		axios
-			.get(
-				"http://my-json-server.typicode.com/qotrunnadao/json-db/users/" +
-					id
-			)
+			.get(baseURL + "/api/users/" + id)
 			.then(function (response) {
 				dispatch({
 					type: GET_USER_DETAIL,
@@ -63,10 +62,7 @@ export const getUserDetail = (id) => {
 export const PostUserCreate = (data) => {
 	return (dispatch) => {
 		axios
-			.post(
-				"http://my-json-server.typicode.com/qotrunnadao/json-db/users",
-				data
-			)
+			.post(baseURL + "/api/users", data)
 			.then(function (response) {
 				// handle success
 				dispatch({
@@ -113,11 +109,7 @@ export const deleteDataUser = () => {
 export const putUserUpdate = (data, id) => {
 	return (dispatch) => {
 		axios
-			.put(
-				"http://my-json-server.typicode.com/qotrunnadao/json-db/users/" +
-					id,
-				data
-			)
+			.put(baseURL + "/api/users/" + id, data)
 			.then(function (response) {
 				console.log(response);
 
@@ -144,10 +136,7 @@ export const putUserUpdate = (data, id) => {
 export const deleteUser = (id) => {
 	return (dispatch) => {
 		axios
-			.delete(
-				"http://my-json-server.typicode.com/qotrunnadao/json-db/users/" +
-					id
-			)
+			.delete(baseURL + "api/users/" + id)
 			.then(function (response) {
 				console.log(response);
 			})
