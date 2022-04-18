@@ -5,18 +5,18 @@ export const POST_USER_CREATE = "POST_USER_CREATE";
 export const GET_USER_DETAIL = "GET_USER_DETAIL";
 export const PUT_USER_EDIT = "PUT_USER_EDIT";
 
-const baseURL = "https://sandbox-paketin.herokuapp.com/v1";
+const baseURL = "/v1";
 
 export const getUsersList = () => {
 	return (dispatch) => {
 		axios
 			.get(baseURL + "/api/users")
 			.then(function (response) {
-				// handle success
+				// handle success				
 				dispatch({
 					type: GET_USERS_LIST,
 					payload: {
-						data: response.paketin.data,
+						data: response.data.paketin.data,
 						Message: false,
 					},
 				});
@@ -42,7 +42,7 @@ export const getUserDetail = (id) => {
 				dispatch({
 					type: GET_USER_DETAIL,
 					payload: {
-						data: response.data,
+						data: response.data.paketin.data,
 						errorMessage: false,
 					},
 				});
@@ -68,7 +68,7 @@ export const PostUserCreate = (data) => {
 				dispatch({
 					type: POST_USER_CREATE,
 					payload: {
-						data: response.data,
+						data: response.data.paketin.data,
 						errorMessage: false,
 					},
 				});
@@ -116,7 +116,7 @@ export const putUserUpdate = (data, id) => {
 				dispatch({
 					type: PUT_USER_EDIT,
 					payload: {
-						data: response.data,
+						data: response.data.paketin.data,
 						errorMessage: false,
 					},
 				});
