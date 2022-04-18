@@ -11,7 +11,12 @@ import {
 	Spinner,
 } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEdit, faTrash, faUserPlus } from "@fortawesome/free-solid-svg-icons";
+import {
+	faEdit,
+	faTrash,
+	faUserPlus,
+	faInfo,
+} from "@fortawesome/free-solid-svg-icons";
 import ToolkitProvider, {
 	Search,
 } from "react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit";
@@ -72,23 +77,8 @@ const UsersTable = (props) => {
 			sort: true,
 		},
 		{
-			dataField: "nama_admin",
-			text: "Nama Admin",
-			sort: true,
-		},
-		{
 			dataField: "nomor_kantor",
 			text: "Nomor Kantor",
-			sort: true,
-		},
-		{
-			dataField: "alamat_kantor",
-			text: "Alamat Kantor",
-			sort: true,
-		},
-		{
-			dataField: "password",
-			text: "Password",
 			sort: true,
 		},
 		{
@@ -97,11 +87,18 @@ const UsersTable = (props) => {
 			formatter: (rowContent, row) => {
 				return (
 					<div>
-						<Link to={"edit-user/" + row.id}>
+						<Link to={"/detail-user/" + row.id}>
+							<Button color="dark" className="mr-2">
+								<FontAwesomeIcon icon={faInfo} /> Detail
+							</Button>
+						</Link>
+
+						<Link to={"/edit-user/" + row.id}>
 							<Button color="warning" className="mr-2">
 								<FontAwesomeIcon icon={faEdit} /> Edit
 							</Button>
 						</Link>
+
 						<Button
 							color="danger"
 							className="mr-2"
@@ -133,18 +130,22 @@ const UsersTable = (props) => {
 						>
 							{(props) => (
 								<div>
-									<Row className="mb-3">
+									<Row>
 										<Col>
-											<Link to="/create-user">
-												<Button color="primary">
+											<Link to="/create">
+												<Button
+													color="primary"
+													className="mr-2 mb-3"
+												>
 													<FontAwesomeIcon
 														icon={faUserPlus}
 													/>{" "}
 													Create User
 												</Button>
 											</Link>
-
-											<div className="mt-3">
+										</Col>
+										<Col>
+											<div className="float-right">
 												<SearchBar
 													{...props.searchProps}
 													placeholder="Search .."

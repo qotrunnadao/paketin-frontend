@@ -21,8 +21,8 @@ import swal from "sweetalert";
 
 const mapStateToProps = (state) => {
 	return {
-		getResponDataUser: state.users.getResponDataUser,
-		errorResponDataUser: state.users.errorResponDataUser,
+		getResponseDataUser: state.users.getResponseDataUser,
+		errorResponseDataUser: state.users.errorResponseDataUser,
 	};
 };
 
@@ -35,16 +35,19 @@ class ContentEditUser extends Component {
 		this.props.dispatch(putUserUpdate(data, this.props.match.params.id));
 	}
 	render() {
-		if (this.props.getResponDataUser || this.props.errorResponDataUser) {
-			if (this.props.errorResponDataUser) {
-				swal("Failed!", this.props.errorResponDataUser, "error");
+		if (
+			this.props.getResponseDataUser ||
+			this.props.errorResponseDataUser
+		) {
+			if (this.props.errorResponseDataUser) {
+				swal("Failed!", this.props.errorResponseDataUser, "error");
 			} else {
 				swal(
 					"User Updated!",
 					"Nama Kantor : " +
-						this.props.getResponDataUser.nama_kantor +
+						this.props.getResponseDataUser.nama_kantor +
 						" , Nama Admin : " +
-						this.props.getResponDataUser.nama_admin,
+						this.props.getResponseDataUser.nama_admin,
 					"success"
 				);
 			}
@@ -54,7 +57,7 @@ class ContentEditUser extends Component {
 				<Card>
 					<CardBody>
 						<CardTitle tag="h4" className="mb-3">
-							Create User Paketin
+							Edit User Paketin
 						</CardTitle>
 						<Row>
 							<Col>

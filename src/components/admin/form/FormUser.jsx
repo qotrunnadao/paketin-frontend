@@ -37,6 +37,7 @@ const renderField = ({
 const mapStateToProps = (state) => {
 	return {
 		initialValues: {
+			id: state.users.getUserDetail.id,
 			nama_kantor: state.users.getUserDetail.nama_kantor,
 			nama_admin: state.users.getUserDetail.nama_admin,
 			alamat_kantor: state.users.getUserDetail.alamat_kantor,
@@ -50,6 +51,7 @@ class formUser extends Component {
 	render() {
 		return (
 			<form onSubmit={this.props.handleSubmit}>
+				<Field type="hidden" name="id" component={renderField} />
 				<FormGroup row>
 					<Col md={6}>
 						<FormGroup>
@@ -126,8 +128,8 @@ class formUser extends Component {
 }
 
 formUser = reduxForm({
-	form: "formCreateUser",
-	enableReinitialize: true,
+	form: "formUser",
 	validate: UserValidation,
+	enableReinitialize: true,
 })(formUser);
 export default connect(mapStateToProps, null)(formUser);

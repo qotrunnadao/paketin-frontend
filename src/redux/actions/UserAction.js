@@ -12,7 +12,7 @@ export const getUsersList = () => {
 		axios
 			.get(baseURL + "/api/users")
 			.then(function (response) {
-				// handle success				
+				// handle success
 				dispatch({
 					type: GET_USERS_LIST,
 					payload: {
@@ -86,26 +86,6 @@ export const PostUserCreate = (data) => {
 	};
 };
 
-export const deleteDataUser = () => {
-	return (dispatch) => {
-		dispatch({
-			type: GET_USER_DETAIL,
-			payload: {
-				data: false,
-				errorMessage: false,
-			},
-		});
-
-		dispatch({
-			type: POST_USER_CREATE,
-			payload: {
-				data: false,
-				errorMessage: false,
-			},
-		});
-	};
-};
-
 export const putUserUpdate = (data, id) => {
 	return (dispatch) => {
 		axios
@@ -136,12 +116,32 @@ export const putUserUpdate = (data, id) => {
 export const deleteUser = (id) => {
 	return (dispatch) => {
 		axios
-			.delete(baseURL + "api/users/" + id)
+			.delete(baseURL + "/api/users/" + id)
 			.then(function (response) {
 				console.log(response);
 			})
 			.catch(function (error) {
 				console.log(error);
 			});
+	};
+};
+
+export const deleteDataUser = () => {
+	return (dispatch) => {
+		dispatch({
+			type: GET_USER_DETAIL,
+			payload: {
+				data: false,
+				errorMessage: false,
+			},
+		});
+
+		dispatch({
+			type: POST_USER_CREATE,
+			payload: {
+				data: false,
+				errorMessage: false,
+			},
+		});
 	};
 };

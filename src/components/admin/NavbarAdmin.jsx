@@ -13,7 +13,7 @@ function NavbarAdmin() {
 				sticky="top"
 			>
 				<Container>
-					<Navbar.Brand href="#home" className="brand">
+					<Navbar.Brand className="brand">
 						<img
 							alt=""
 							src="assets/images/logo2.png"

@@ -22,7 +22,6 @@ const mapStateToProps = (state) => {
 		errorResponseDataUser: state.users.errorResponseDataUser,
 	};
 };
-
 class ContentCreateUser extends Component {
 	handleSubmit(data) {
 		this.props.dispatch(PostUserCreate(data));
@@ -39,8 +38,8 @@ class ContentCreateUser extends Component {
 					"User Created!",
 					"Nama Kantor : " +
 						this.props.getResponseDataUser.nama_kantor +
-						" , Nama Admin : " +
-						this.props.getResponseDataUser.nama_admin,
+						" , Nomor Kantor : " +
+						this.props.getResponseDataUser.nomor_kantor,
 					"success"
 				);
 			}
