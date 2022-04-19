@@ -9,15 +9,15 @@ import {
 	Button,
 } from "reactstrap";
 import { connect } from "react-redux";
-import { getUserDetail } from "../../../redux/actions/UserAction";
+import { getPaketDetail } from "../../../../redux/actions/PaketAction";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import DetailUser from "../form/DetailUser";
+import DetailPaket from "../../form/DetailPaket";
 
-class ContentDetailUser extends Component {
+class ContentDetailPaket extends Component {
 	componentDidMount() {
-		this.props.dispatch(getUserDetail(this.props.match.params.id));
+		this.props.dispatch(getPaketDetail(this.props.match.params.id));
 	}
 
 	render() {
@@ -26,11 +26,12 @@ class ContentDetailUser extends Component {
 				<Card>
 					<CardBody>
 						<CardTitle tag="h4" className="mb-3">
-							Detail User Paketin
+							Detail Paket
+							<hr></hr>
 						</CardTitle>
 						<Row>
 							<Col>
-								<Link to="/users">
+								<Link to="/paket">
 									<Button color="danger">
 										<FontAwesomeIcon icon={faArrowLeft} />
 										Back
@@ -38,7 +39,7 @@ class ContentDetailUser extends Component {
 								</Link>
 							</Col>
 						</Row>
-						<DetailUser />
+						<DetailPaket />
 					</CardBody>
 				</Card>
 			</Container>
@@ -46,4 +47,4 @@ class ContentDetailUser extends Component {
 	}
 }
 
-export default connect()(ContentDetailUser);
+export default connect()(ContentDetailPaket);

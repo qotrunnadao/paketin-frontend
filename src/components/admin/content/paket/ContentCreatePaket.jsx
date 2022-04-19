@@ -11,43 +11,35 @@ import {
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import FormUser from "../form/FormUser";
+import FormPaket from "../../form/FormPaket";
 import { connect } from "react-redux";
-import {
-	getUserDetail,
-	putUserUpdate,
-} from "../../../redux/actions/UserAction";
+import { PostPaketCreate } from "../../../../redux/actions/PaketAction";
 import swal from "sweetalert";
 
 const mapStateToProps = (state) => {
 	return {
-		getResponseDataUser: state.users.getResponseDataUser,
-		errorResponseDataUser: state.users.errorResponseDataUser,
+		getResponseDataPaket: state.users.getResponseDataPaket,
+		errorResponseDataPaket: state.users.errorResponseDataPaket,
 	};
 };
-
-class ContentEditUser extends Component {
-	componentDidMount() {
-		this.props.dispatch(getUserDetail(this.props.match.params.id));
-	}
-
+class ContentCreatePaket extends Component {
 	handleSubmit(data) {
-		this.props.dispatch(putUserUpdate(data, this.props.match.params.id));
+		this.props.dispatch(PostPaketCreate(data));
 	}
 	render() {
 		if (
-			this.props.getResponseDataUser ||
-			this.props.errorResponseDataUser
+			this.props.getResponseDataPaket ||
+			this.props.errorResponseDataPaket
 		) {
-			if (this.props.errorResponseDataUser) {
-				swal("Failed!", this.props.errorResponseDataUser, "error");
+			if (this.props.errorResponseDataPaket) {
+				swal("Failed!", this.props.errorResponseDataPaket, "error");
 			} else {
 				swal(
-					"User Updated!",
-					"Nama Kantor : " +
-						this.props.getResponseDataUser.nama_kantor +
-						" , Nama Admin : " +
-						this.props.getResponseDataUser.nama_admin,
+					"Paket Created!",
+					"produk : " +
+						this.props.getResponseDataUser.produk +
+						" , berat_produk : " +
+						this.props.getResponseDataUser.berat_produk,
 					"success"
 				);
 			}
@@ -57,11 +49,12 @@ class ContentEditUser extends Component {
 				<Card>
 					<CardBody>
 						<CardTitle tag="h4" className="mb-3">
-							Edit User Paketin
+							Create Paket
+							<hr></hr>
 						</CardTitle>
 						<Row>
 							<Col>
-								<Link to="/users">
+								<Link to="/paket">
 									<Button color="danger">
 										<FontAwesomeIcon icon={faArrowLeft} />
 										Back
@@ -69,7 +62,7 @@ class ContentEditUser extends Component {
 								</Link>
 							</Col>
 						</Row>
-						<FormUser
+						<FormPaket
 							onSubmit={(data) => this.handleSubmit(data)}
 						/>
 					</CardBody>
@@ -79,4 +72,4 @@ class ContentEditUser extends Component {
 	}
 }
 
-export default connect(mapStateToProps, null)(ContentEditUser);
+export default connect(mapStateToProps, null)(ContentCreatePaket);

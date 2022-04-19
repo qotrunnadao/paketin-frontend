@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faEdit,
 	faTrash,
-	faUserPlus,
+	faPlus,
 	faInfo,
 } from "@fortawesome/free-solid-svg-icons";
 import ToolkitProvider, {
@@ -15,7 +15,7 @@ import paginationFactory from "react-bootstrap-table2-paginator";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import swal from "sweetalert";
-import { deleteUser } from "../../../redux/actions/UserAction";
+import { deletePaket } from "../../../redux/actions/PaketAction";
 
 const { SearchBar } = Search;
 
@@ -27,8 +27,8 @@ const handleClick = (dispatch, id) => {
 		dangerMode: true,
 	}).then((willDelete) => {
 		if (willDelete) {
-			dispatch(deleteUser(id));
-			swal("Data User Sukses dihapus", {
+			dispatch(deletePaket(id));
+			swal("Data Paket Sukses dihapus", {
 				icon: "success",
 			});
 		} else {
@@ -47,12 +47,12 @@ const defaultSorted = [
 // memanggil state global menjadi props
 const mapStateToProps = (state) => {
 	return {
-		getUsersList: state.users.getUsersList,
-		errorUsersList: state.users.errorUsersList,
+		getPaketList: state.paket.getPaketList,
+		errorPaketList: state.paket.errorPaketList,
 	};
 };
 
-const UsersTable = (props) => {
+const PaketTable = (props) => {
 	const columns = [
 		{
 			dataField: "id",
@@ -63,13 +63,33 @@ const UsersTable = (props) => {
 			},
 		},
 		{
-			dataField: "nama_kantor",
-			text: "Nama Kantor",
+			dataField: "produk",
+			text: "Produk",
 			sort: true,
 		},
 		{
-			dataField: "nomor_kantor",
-			text: "Nomor Kantor",
+			dataField: "berat_paket",
+			text: "Berat Paket",
+			sort: true,
+		},
+		{
+			dataField: "nama_pengiriim",
+			text: "Nama Pengirim",
+			sort: true,
+		},
+		{
+			dataField: "nama_penerima",
+			text: "Nama Penerima",
+			sort: true,
+		},
+		{
+			dataField: "nomor_penerima",
+			text: "Nomor Penerima",
+			sort: true,
+		},
+		{
+			dataField: "alamat_tujuan",
+			text: "Alamat Tujuan",
 			sort: true,
 		},
 		{
@@ -78,13 +98,13 @@ const UsersTable = (props) => {
 			formatter: (rowContent, row) => {
 				return (
 					<div>
-						<Link to={"/detail-user/" + row.id}>
+						<Link to={"/detail-paket/" + row.id}>
 							<Button color="dark" className="mr-2">
 								<FontAwesomeIcon icon={faInfo} /> Detail
 							</Button>
 						</Link>
 
-						<Link to={"/edit-user/" + row.id}>
+						<Link to={"/edit-paket/" + row.id}>
 							<Button color="warning" className="mr-2">
 								<FontAwesomeIcon icon={faEdit} /> Edit
 							</Button>
@@ -105,11 +125,11 @@ const UsersTable = (props) => {
 
 	return (
 		<div>
-			{props.getUsersList ? (
+			{props.getPaketList ? (
 				<ToolkitProvider
 					bootstrap4
 					keyField="id"
-					data={props.getUsersList}
+					data={props.getPaketList}
 					columns={columns}
 					defaultSorted={defaultSorted}
 					search
@@ -118,15 +138,13 @@ const UsersTable = (props) => {
 						<div>
 							<Row>
 								<Col>
-									<Link to="/create-user">
+									<Link to="/create-paket">
 										<Button
 											color="primary"
 											className="mr-2 mb-3"
 										>
-											<FontAwesomeIcon
-												icon={faUserPlus}
-											/>{" "}
-											Create User
+											<FontAwesomeIcon icon={faPlus} />{" "}
+											Create Paket
 										</Button>
 									</Link>
 								</Col>
@@ -149,8 +167,8 @@ const UsersTable = (props) => {
 				</ToolkitProvider>
 			) : (
 				<div className="text-center">
-					{props.errorUsersList ? (
-						<h4>{props.errorUsersList}</h4>
+					{props.errorPaketList ? (
+						<h4>{props.errorPaketList}</h4>
 					) : (
 						<Spinner color="dark" />
 					)}
@@ -160,4 +178,4 @@ const UsersTable = (props) => {
 	);
 };
 
-export default connect(mapStateToProps, null)(UsersTable);
+export default connect(mapStateToProps, null)(PaketTable);

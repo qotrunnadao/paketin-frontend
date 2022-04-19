@@ -11,9 +11,9 @@ import {
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import FormUser from "../form/FormUser";
+import FormUser from "../../form/FormUser";
 import { connect } from "react-redux";
-import { PostUserCreate } from "../../../redux/actions/UserAction";
+import { PostUserCreate } from "../../../../redux/actions/UserAction";
 import swal from "sweetalert";
 
 const mapStateToProps = (state) => {

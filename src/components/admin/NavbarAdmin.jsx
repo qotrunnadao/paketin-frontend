@@ -28,8 +28,8 @@ function NavbarAdmin() {
 							<Link to="/" className="link">
 								Home
 							</Link>
-							<Link to="/pengiriman" className="link">
-								Pengiriman
+							<Link to="/paket" className="link">
+								Data Paket
 							</Link>
 							<Link to="/users" className="link">
 								Data User

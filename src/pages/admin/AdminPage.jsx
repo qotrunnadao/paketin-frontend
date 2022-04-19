@@ -3,18 +3,18 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ContentHomeAdmin from "../../components/admin/content/ContentHomeAdmin";
 import NavbarAdmin from "../../components/admin/NavbarAdmin";
 import Footer from "../../components/Footer";
-import ContentDataUsers from "../../components/admin/content/ContentDataUsers";
-import ContentCreateUser from "../../components/admin/content/ContentCreateUser";
-import ContentDetailUser from "../../components/admin/content/ContentDetailUser";
-import ContentEditUser from "../../components/admin/content/ContentEditUser";
-import ContentDataPengiriman from "../../components/admin/content/ContentDataPengiriman";
+import ContentDataUsers from "../../components/admin/content/user/ContentDataUsers";
+import ContentCreateUser from "../../components/admin/content/user/ContentCreateUser";
+import ContentDetailUser from "../../components/admin/content/user/ContentDetailUser";
+import ContentEditUser from "../../components/admin/content/user/ContentEditUser";
+import ContentDataPaket from "../../components/admin/content/paket/ContentDataPaket";
 
 export default class AdminPage extends Component {
 	render() {
 		return (
 			<div>
 				<BrowserRouter>
-					<NavbarAdmin></NavbarAdmin>
+					<NavbarAdmin />
 					<Routes>
 						<Route
 							path="/"
@@ -32,19 +32,19 @@ export default class AdminPage extends Component {
 							element={<ContentCreateUser />}
 						></Route>
 						<Route
-							path="/detail-user"
+							path="/detail-user/:id"
 							exact
 							element={<ContentDetailUser />}
 						></Route>
 						<Route
-							path="/edit-user"
+							path="/edit-user/:id"
 							exact
 							element={<ContentEditUser />}
 						></Route>
 						<Route
-							path="/pengiriman"
+							path="/paket"
 							exact
-							element={<ContentDataPengiriman />}
+							element={<ContentDataPaket />}
 						></Route>
 					</Routes>
 					<Footer></Footer>
