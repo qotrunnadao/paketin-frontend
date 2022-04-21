@@ -139,7 +139,7 @@ class formPaket extends Component {
 }
 
 formPaket = reduxForm({
-	form: "formUser",
+	form: "formPaket",
 	validate: PaketValidations,
 	enableReinitialize: true,
 })(formPaket);

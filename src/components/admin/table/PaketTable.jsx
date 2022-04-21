@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BootstrapTable from "react-bootstrap-table-next";
 import { Button, Row, Col, Spinner } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faEdit,
 	faTrash,
-	faPlus,
+	faBox,
 	faInfo,
 } from "@fortawesome/free-solid-svg-icons";
+import "../../../assets/css/Table.css";
 import ToolkitProvider, {
 	Search,
 } from "react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit";
@@ -63,33 +64,13 @@ const PaketTable = (props) => {
 			},
 		},
 		{
+			dataField: "nomor_resi",
+			text: "Nomor Resi",
+			sort: true,
+		},
+		{
 			dataField: "produk",
-			text: "Produk",
-			sort: true,
-		},
-		{
-			dataField: "berat_paket",
-			text: "Berat Paket",
-			sort: true,
-		},
-		{
-			dataField: "nama_pengiriim",
-			text: "Nama Pengirim",
-			sort: true,
-		},
-		{
-			dataField: "nama_penerima",
-			text: "Nama Penerima",
-			sort: true,
-		},
-		{
-			dataField: "nomor_penerima",
-			text: "Nomor Penerima",
-			sort: true,
-		},
-		{
-			dataField: "alamat_tujuan",
-			text: "Alamat Tujuan",
+			text: "Nama Produk",
 			sort: true,
 		},
 		{
@@ -99,20 +80,20 @@ const PaketTable = (props) => {
 				return (
 					<div>
 						<Link to={"/detail-paket/" + row.id}>
-							<Button color="dark" className="mr-2">
+							<Button color="dark" className="button-aksi">
 								<FontAwesomeIcon icon={faInfo} /> Detail
 							</Button>
 						</Link>
 
 						<Link to={"/edit-paket/" + row.id}>
-							<Button color="warning" className="mr-2">
+							<Button color="warning" className="button-aksi">
 								<FontAwesomeIcon icon={faEdit} /> Edit
 							</Button>
 						</Link>
 
 						<Button
 							color="danger"
-							className="mr-2"
+							className="button-aksi"
 							onClick={() => handleClick(props.dispatch, row.id)}
 						>
 							<FontAwesomeIcon icon={faTrash} /> Delete
@@ -143,13 +124,13 @@ const PaketTable = (props) => {
 											color="primary"
 											className="mr-2 mb-3"
 										>
-											<FontAwesomeIcon icon={faPlus} />{" "}
+											<FontAwesomeIcon icon={faBox} />{" "}
 											Create Paket
 										</Button>
 									</Link>
 								</Col>
 								<Col>
-									<div className="float-right">
+									<div className="search-bar">
 										<SearchBar
 											{...props.searchProps}
 											placeholder="Search .."

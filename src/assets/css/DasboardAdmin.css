@@ -1,11 +1,18 @@
 .welcome{
 	margin-top: 100px;
 	background-color: #B9CCED !important;
+	color: #444444;
 }
 .card-dashboard{
 	background-image: linear-gradient(to top, #012970, #7ea3e2) !important;
 	height: 200px;
 }
+.card-dashboard:hover{
+	transform: translate3d(0, 0, 50px) scale(1.1);
+    transition: 0.5s;
+    box-shadow: 0px 5px 10px #5f638a;
+}
+
 .title{
 	color: #fff;
 	font-size: 20px;

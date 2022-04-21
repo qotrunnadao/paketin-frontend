@@ -4,9 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import reportWebVitals from "./reportWebVitals";
 // import page
-import MemberPage from "./pages/member/MemberPage";
-import LoginPage from "./pages/LoginPage";
-import RegisterPage from "./pages/RegisterPage";
 import AdminPage from "./pages/admin/AdminPage";
 // import redux
 import { createStore, applyMiddleware, compose } from "redux";

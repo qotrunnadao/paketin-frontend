@@ -8,6 +8,9 @@ import ContentCreateUser from "../../components/admin/content/user/ContentCreate
 import ContentDetailUser from "../../components/admin/content/user/ContentDetailUser";
 import ContentEditUser from "../../components/admin/content/user/ContentEditUser";
 import ContentDataPaket from "../../components/admin/content/paket/ContentDataPaket";
+import ContentCreatePaket from "../../components/admin/content/paket/ContentCreatePaket";
+import ContentDetailPaket from "../../components/admin/content/paket/ContentDetailPaket";
+import ContentEditPaket from "../../components/admin/content/paket/ContentEditPaket";
 
 export default class AdminPage extends Component {
 	render() {
@@ -45,6 +48,21 @@ export default class AdminPage extends Component {
 							path="/paket"
 							exact
 							element={<ContentDataPaket />}
+						></Route>
+						<Route
+							path="/create-paket"
+							exact
+							element={<ContentCreatePaket />}
+						></Route>
+						<Route
+							path="/detail-paket/:id"
+							exact
+							element={<ContentDetailPaket />}
+						></Route>
+						<Route
+							path="/edit-paket/:id"
+							exact
+							element={<ContentEditPaket />}
 						></Route>
 					</Routes>
 					<Footer></Footer>

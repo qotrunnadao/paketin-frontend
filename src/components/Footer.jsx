@@ -9,11 +9,11 @@ function Footer() {
 				<div className="copyright">
 					© Copyright{" "}
 					<strong>
-						<span>Paketin.com</span>
+						<span>Paketin</span>
 					</strong>
 					. All Rights Reserved
 				</div>
-				<div className="credits">Designed by Qotrunnada & Bugaresa</div>
+				<div className="credits">By Qotrunnada & Bugaresa</div>
 			</Container>
 		</footer>
 	);

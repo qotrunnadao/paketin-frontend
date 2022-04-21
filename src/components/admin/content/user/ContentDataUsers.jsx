@@ -19,7 +19,7 @@ class ContentDataUsers extends Component {
 				<Card>
 					<CardBody>
 						<CardTitle tag="h4" className="mb-3">
-							Data User Paketin
+							Data User
 							<hr></hr>
 						</CardTitle>
 						<UsersTable />

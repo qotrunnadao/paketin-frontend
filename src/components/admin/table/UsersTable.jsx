@@ -8,6 +8,7 @@ import {
 	faUserPlus,
 	faInfo,
 } from "@fortawesome/free-solid-svg-icons";
+import "../../../assets/css/Table.css";
 import ToolkitProvider, {
 	Search,
 } from "react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit";
@@ -79,20 +80,20 @@ const UsersTable = (props) => {
 				return (
 					<div>
 						<Link to={"/detail-user/" + row.id}>
-							<Button color="dark" className="mr-2">
+							<Button color="dark" className="button-aksi">
 								<FontAwesomeIcon icon={faInfo} /> Detail
 							</Button>
 						</Link>
 
 						<Link to={"/edit-user/" + row.id}>
-							<Button color="warning" className="mr-2">
+							<Button color="warning" className="button-aksi">
 								<FontAwesomeIcon icon={faEdit} /> Edit
 							</Button>
 						</Link>
 
 						<Button
 							color="danger"
-							className="mr-2"
+							className="button-aksi"
 							onClick={() => handleClick(props.dispatch, row.id)}
 						>
 							<FontAwesomeIcon icon={faTrash} /> Delete
@@ -131,7 +132,7 @@ const UsersTable = (props) => {
 									</Link>
 								</Col>
 								<Col>
-									<div className="float-right">
+									<div className="search-bar">
 										<SearchBar
 											{...props.searchProps}
 											placeholder="Search .."

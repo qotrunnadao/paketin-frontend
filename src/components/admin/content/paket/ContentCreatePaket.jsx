@@ -18,8 +18,8 @@ import swal from "sweetalert";
 
 const mapStateToProps = (state) => {
 	return {
-		getResponseDataPaket: state.users.getResponseDataPaket,
-		errorResponseDataPaket: state.users.errorResponseDataPaket,
+		getResponseDataPaket: state.paket.getResponseDataPaket,
+		errorResponseDataPaket: state.paket.errorResponseDataPaket,
 	};
 };
 class ContentCreatePaket extends Component {
@@ -37,9 +37,9 @@ class ContentCreatePaket extends Component {
 				swal(
 					"Paket Created!",
 					"produk : " +
-						this.props.getResponseDataUser.produk +
+						this.props.getResponseDataPaket.produk +
 						" , berat_produk : " +
-						this.props.getResponseDataUser.berat_produk,
+						this.props.getResponseDataPaket.berat_produk,
 					"success"
 				);
 			}
