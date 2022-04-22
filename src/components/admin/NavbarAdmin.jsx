@@ -40,7 +40,7 @@ function NavbarAdmin() {
 							variant="outline-secondary"
 							className="login-button"
 						>
-							Logout
+							<Link to="/logout">Logout</Link>
 							<i class="fa-regular fa-right-to-bracket"></i>
 						</Button>
 					</Navbar.Collapse>

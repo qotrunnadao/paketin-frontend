@@ -3,6 +3,7 @@ import { FiLogIn } from "react-icons/fi";
 import { Nav, Navbar, Container, NavDropdown, Button } from "react-bootstrap";
 import "../../assets/css/NavbarMember.css";
 import "../../assets/css/General.css";
+import { Link } from "react-router-dom";
 
 const NavbarMember = () => {
 	return (
@@ -47,7 +48,7 @@ const NavbarMember = () => {
 							variant="outline-secondary"
 							className="login-button"
 						>
-							Login
+							<Link to="/admin">Login</Link>
 							<span className="icons-login">
 								<FiLogIn />
 							</span>

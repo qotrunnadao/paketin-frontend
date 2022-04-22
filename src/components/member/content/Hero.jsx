@@ -16,7 +16,7 @@ export const Hero = (props) => {
 			<Container>
 				<Row>
 					<Col className="col-lg-6 d-flex flex-column justify-content-center">
-						<h1 data-aos="fade-up">{props.title}</h1>
+						{/* <h1 data-aos="fade-up">{props.title}</h1> */}
 						<h1 data-aos="fade-up" data-aos-delay={400}>
 							Jasa Pengiriman Barang & Cek Resi
 						</h1>

@@ -1,13 +1,15 @@
-import AboutUs from "./components/member/content/AboutUs";
-import ContactUs from "./components/member/content/ContactUs";
-import DaftarKantor from "./components/member/content/DaftarKantor";
-import Faq from "./components/member/content/Faq";
-import Hero from "./components/member/content/Hero";
-import Footer from "./components/member/Footer";
-import NavbarComponent from "./components/member/NavbarMember";
+import AdminPage from "./pages/admin/AdminPage";
+import MemberPage from "./pages/member/MemberPage";
+import RouterPage from "./pages/RouterPage";
 
 function App() {
-	return <div></div>;
+	return (
+		<div>
+			{/* <RouterPage /> */}
+			{/* <MemberPage /> */}
+			<AdminPage />
+		</div>
+	);
 }
 
 export default App;

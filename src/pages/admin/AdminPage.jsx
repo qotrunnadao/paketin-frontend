@@ -11,6 +11,9 @@ import ContentDataPaket from "../../components/admin/content/paket/ContentDataPa
 import ContentCreatePaket from "../../components/admin/content/paket/ContentCreatePaket";
 import ContentDetailPaket from "../../components/admin/content/paket/ContentDetailPaket";
 import ContentEditPaket from "../../components/admin/content/paket/ContentEditPaket";
+import LoginPage from "../LoginPage";
+import RegisterPage from "../RegisterPage";
+import MemberPage from "../member/MemberPage";
 
 export default class AdminPage extends Component {
 	render() {
@@ -63,6 +66,21 @@ export default class AdminPage extends Component {
 							path="/edit-paket/:id"
 							exact
 							element={<ContentEditPaket />}
+						></Route>
+						<Route
+							path="/logout"
+							exact
+							element={<LoginPage />}
+						></Route>
+						<Route
+							path="/login"
+							exact
+							element={<LoginPage />}
+						></Route>
+						<Route
+							path="/register"
+							exact
+							element={<RegisterPage />}
 						></Route>
 					</Routes>
 					<Footer></Footer>

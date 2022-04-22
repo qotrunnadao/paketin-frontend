@@ -16,7 +16,7 @@ export default class MemberPage extends Component {
 		return (
 			<div className="App">
 				<NavbarComponent></NavbarComponent>
-				<Hero title={this.state.title}></Hero>
+				<Hero></Hero>
 				<main id="main">
 					<AboutUs></AboutUs>
 					<DaftarKantor></DaftarKantor>
